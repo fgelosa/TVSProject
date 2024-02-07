@@ -1,5 +1,28 @@
 <project>
-	<target name="test">
+
+    <target name="clean">
+        <delete dir="JML/build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="JML/TVS_Progetto/build/classes"/>
+        <javac srcdir="JML/TVS_Progetto/src/" destdir="JML/TVS_Progetto/build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="JML/TVS_Progetto/build/jar"/>
+        <jar destfile="JML/TVS_Progetto/build/jar/HelloWorld.jar" basedir="JML/TVS_Progetto/build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="pkgbowlingclub.BowlingClub"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="JML/TVS_Progetto/build/jar/BowlingClub.jar" fork="true"/>
+    </target>
+
+	<target name="test" depends="compile">
  	   <junit printsummary="on" fork="true" haltonfailure="yes">
   	      <classpath refid="junit.class.path" />
   	      <formatter type="xml" />
