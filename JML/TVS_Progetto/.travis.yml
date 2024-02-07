@@ -1,2 +1,7 @@
 language: java
 install: ant deps
+jdk:
+  - openjdk11
+script:
+  - ./gradlew check
+  - ant pkgbowlingclub
