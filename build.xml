@@ -1,0 +1,36 @@
+<project>
+
+    <target name="clean">
+        <delete dir="JML/build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="JML/build/classes"/>
+        <javac srcdir="JML/src" destdir="JML/build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="JML/build/jar"/>
+        <jar destfile="JML/build/jar/HelloWorld.jar" basedir="JML/build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="pkgbowlingclub.BowlingClub"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="JML/build/jar/BowlingClub.jar" fork="true"/>
+    </target>
+
+	<target name="test" depends="compile">
+ 	   <junit printsummary="on" fork="true" haltonfailure="yes">
+  	      <classpath refid="junit.class.path" />
+  	      <formatter type="xml" />
+  	      <batchtest todir="JML/test">
+  	          <fileset dir="JML/scr/">
+   	             <include name="**/*Test*.java" />
+   	         </fileset>
+  	      </batchtest>
+  	  </junit>
+  	</target>
+</project>
