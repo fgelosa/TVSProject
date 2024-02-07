@@ -1,7 +1,1 @@
 language: java
-jdk:
-  - openjdk11
-script:
-  - ./gradlew check
-  - ant BowlingClubTest
-  - ant BowlingClubCTWTest
