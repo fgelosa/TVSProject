@@ -5,13 +5,13 @@
     </target>
 
     <target name="compile">
-        <mkdir dir="JML/build/classes"/>
-        <javac srcdir="JML/src" destdir="JML/build/classes"/>
+        <mkdir dir="JML/TVS_Progetto/build/classes"/>
+        <javac srcdir="JML/TVS_Progetto/src/" destdir="JML/TVS_Progetto/build/classes"/>
     </target>
 
     <target name="jar">
-        <mkdir dir="JML/build/jar"/>
-        <jar destfile="JML/build/jar/HelloWorld.jar" basedir="JML/build/classes">
+        <mkdir dir="JML/TVS_Progetto/build/jar"/>
+        <jar destfile="JML/TVS_Progetto/build/jar/HelloWorld.jar" basedir="JML/TVS_Progetto/build/classes">
             <manifest>
                 <attribute name="Main-Class" value="pkgbowlingclub.BowlingClub"/>
             </manifest>
@@ -19,15 +19,15 @@
     </target>
 
     <target name="run">
-        <java jar="JML/build/jar/BowlingClub.jar" fork="true"/>
+        <java jar="JML/TVS_Progetto/build/jar/BowlingClub.jar" fork="true"/>
     </target>
 
 	<target name="test" depends="compile">
  	   <junit printsummary="on" fork="true" haltonfailure="yes">
   	      <classpath refid="junit.class.path" />
   	      <formatter type="xml" />
-  	      <batchtest todir="JML/test">
-  	          <fileset dir="JML/scr/">
+  	      <batchtest todir="JML/TVS_Progetto/test">
+  	          <fileset dir="JML/TVS_Progetto/scr/">
    	             <include name="**/*Test*.java" />
    	         </fileset>
   	      </batchtest>
