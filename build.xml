@@ -1,5 +1,5 @@
 <project>
-	<target name="test" depends="compile">
+	<target name="test">
  	   <junit printsummary="on" fork="true" haltonfailure="yes">
   	      <classpath refid="junit.class.path" />
   	      <formatter type="xml" />
