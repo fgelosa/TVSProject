@@ -1,0 +1,1161 @@
+<?xml version="1.0" encoding="UTF-8"?><TestSessionContainer xmlns="http://www.codecover.org/xml/testsession-container" Date="1706203032721" TestSessionContainerId="7d289399-0be5-41dd-a2e4-c70184600ec1" version="1.0">
+<SrcFileList>
+<SrcFile Content="package pkgbowlingclub;&#13;&#10;&#13;&#10;public class BowlingClub {&#13;&#10;&#9;&#13;&#10;&#9;private /*@spec_public@*/ int pista[]; &#13;&#10;&#9;//ho 4 piste occupabili da max 4 giocatori ciascuna&#13;&#10;&#9;&#13;&#10;&#9;private /*@spec_public@*/ int guadagnoCorrente; &#13;&#10;&#9;//guadagno corrente della serata&#9;&#9;&#13;&#10;&#9;&#13;&#10;&#9;private /*@spec_public@*/ int guadagnoSerata; &#13;&#10;&#9;//guadagno totale della serata&#9;&#9;&#13;&#10;&#9;&#13;&#10;&#9;private /*@spec_public@*/ int guadagnoSettimana[];&#13;&#10;&#9;private /*@spec_public@*/ int giornoSettimana;&#13;&#10;&#9;//riepilogo settimanale dei guadagni&#13;&#10;&#9;&#13;&#10;&#9;private /*@spec_public@*/ boolean aperto;&#13;&#10;&#9;//indica se e' aperto il bowling club&#13;&#10;&#9;&#13;&#10;&#9;private /*@spec_public@*/ int numGiocatori;&#13;&#10;&#9;//numero totale di giocatori su tutte le piste&#13;&#10;&#9;&#13;&#10;&#9;private /*@spec_public@*/ int maxGiocatoriPista = 4;&#13;&#10;&#9;&#13;&#10;&#9;private /*@spec_public@*/ int maxGiocatoriTotale = 16;&#13;&#10;&#9;&#13;&#10;&#9;//INVARIANTI&#13;&#10;&#9;//@ public invariant pista.length == 4 &amp;&amp; pista != null;&#13;&#10;&#9;//@ public invariant guadagnoSerata &gt;= 0;&#13;&#10;&#9;//@ public invariant guadagnoCorrente &gt;= 0;&#13;&#10;&#9;//@ public invariant giornoSettimana &lt;= 7;&#13;&#10;&#9;//@ public invariant numGiocatori &gt;=0 &amp;&amp; numGiocatori &lt;= maxGiocatoriTotale;&#13;&#10;&#9;//@ public invariant (\forall int i; 0&lt;= i &amp;&amp; i &lt; pista.length; pista[i] &gt;= 0);&#13;&#10;&#9;//@ public invariant (\forall int i; 0&lt;= i &amp;&amp; i &lt; pista.length; pista[i] &lt;= maxGiocatoriPista);&#13;&#10;&#13;&#10;&#9;&#13;&#10;&#9;/*@ &#13;&#10;&#9;  @ ensures pista != null &amp;&amp; pista.length == 4;&#13;&#10;&#9;  @ ensures (\forall int i; 0&lt;= i &amp;&amp; i &lt; pista.length; pista[i] == 0);&#13;&#10;&#9;  @ ensures guadagnoSerata == 0;&#13;&#10;&#9;  @ ensures guadagnoCorrente == 0;&#13;&#10;&#9;  @ ensures numGiocatori == 0; &#13;&#10;&#9;  @ ensures aperto == true;&#13;&#10;&#9;  @*/&#13;&#10;&#9;public BowlingClub(){&#13;&#10;&#9;&#9;pista = new int[] {0,0,0,0};&#13;&#10;&#9;&#9;guadagnoSerata = 0;&#13;&#10;&#9;&#9;guadagnoCorrente = 0;&#13;&#10;&#9;&#9;guadagnoSettimana = new int[] {0,0,0,0,0,0,0};&#13;&#10;&#9;&#9;numGiocatori = 0;&#13;&#10;&#9;&#9;aperto = true;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;&#13;&#10;&#9;&#13;&#10;&#9;//@ ensures \result == (aperto ? guadagnoCorrente : guadagnoSerata);&#13;&#10;&#9;public int getGuadagnoGiornaliero() {&#13;&#10;&#9;&#9;if(aperto)&#13;&#10;&#9;&#9;&#9;return guadagnoCorrente;&#13;&#10;&#9;&#9;return guadagnoSerata;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;//@ ensures \result &gt;= 0;&#13;&#10;&#9;public int getGuadagnoSettimana() {&#13;&#10;&#9;&#9;int tmp = 0;&#13;&#10;&#9;&#9;for(int i = 0; i&lt;7;i++)&#13;&#10;&#9;&#9;&#9;tmp += guadagnoSettimana[i];&#13;&#10;&#9;&#9;return tmp;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;//@ ensures \old(aperto) ? (numGiocatori == 0 &amp;&amp; guadagnoSerata == \old(guadagnoCorrente) &amp;&amp; guadagnoCorrente == 0):true;&#13;&#10;&#9;public void chiudiBowlingClub() {&#13;&#10;&#9;&#9;if(aperto) {&#13;&#10;&#9;&#9;&#9;aperto = !aperto;&#13;&#10;&#9;&#9;&#9;int i = 0;&#13;&#10;&#9;&#9;&#9;while(i&lt;4) {&#13;&#10;&#9;&#9;&#9;&#9;pista[i] = 0;&#13;&#10;&#9;&#9;&#9;&#9;i++;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;numGiocatori = 0;&#13;&#10;&#9;&#9;&#9;guadagnoSerata = guadagnoCorrente;&#13;&#10;&#9;&#9;&#9;guadagnoCorrente = 0;&#13;&#10;&#9;&#9;&#9;guadagnoSettimana[giornoSettimana] = guadagnoSerata;&#13;&#10;&#9;&#9;&#9;giornoSettimana = (giornoSettimana + 1 ) % 7;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;//@ ensures \old(!aperto) ? (aperto &amp;&amp; numGiocatori == 0 &amp;&amp; guadagnoSerata == 0 &amp;&amp; guadagnoCorrente == 0):true;&#13;&#10;&#9;public void apriBowlingClub() {&#13;&#10;&#9;&#9;if(!aperto) {&#13;&#10;&#9;&#9;pista = new int[] {0,0,0,0};&#13;&#10;&#9;&#9;guadagnoSerata = 0;&#13;&#10;&#9;&#9;guadagnoCorrente = 0;&#13;&#10;&#9;&#9;numGiocatori = 0;&#13;&#10;&#9;&#9;aperto = true;}&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#13;&#10;&#9;&#13;&#10;&#9;/*@ &#13;&#10;&#9;  @ requires aperto;&#13;&#10;&#9;  @ requires giocatori &lt;= 4 &amp;&amp; giocatori &gt;= 0;&#13;&#10;&#9;  @ ensures numGiocatori == \old(numGiocatori) + giocatori;&#13;&#10;&#9;  @ ensures guadagnoCorrente == \old(guadagnoCorrente) + 15*giocatori;&#13;&#10;&#9;  @*/&#13;&#10;&#9;public int occupaPista(int giocatori) {&#13;&#10;&#9;&#9;if(!aperto) {return -1;}&#13;&#10;&#9;&#9;if(giocatori&gt;maxGiocatoriPista||giocatori&lt;0) {return -1;}&#13;&#10;&#9;&#9;int pistaLibera = -1;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;/*@ loop_invariant&#13;&#10;&#9;&#9;  @  i &gt;= 0 &amp;&amp; i &lt;= 3; &#13;&#10;&#9;&#9;  @ */&#13;&#10;&#9;&#9;for(int i = 0; i &lt; 4;i++) {&#13;&#10;&#9;&#9;&#9;if(pista[i]==0) {&#13;&#10;&#9;&#9;&#9;&#9;pistaLibera = i;&#13;&#10;&#9;&#9;&#9;&#9;break;}&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;if(pistaLibera == -1) {return -1;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;pista[pistaLibera] = giocatori;&#13;&#10;&#9;&#9;guadagnoCorrente += giocatori*15;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;numGiocatori += giocatori;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;return pistaLibera;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;&#13;&#10;&#9;/*@ &#13;&#10;&#9;  @ requires aperto;&#13;&#10;&#9;  @ requires i &gt;= 0 &amp;&amp; i &lt;= 3;&#13;&#10;&#9;  @ ensures pista[i]==0;&#13;&#10;&#9;  @*/&#13;&#10;&#9;public void liberaPista(int i) {&#13;&#10;&#9;&#9;if(i&gt;=0&amp;&amp;i&lt;=3) {&#13;&#10;&#9;&#9;&#9;pista[i] = 0;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;}&#13;&#10;}&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;" Filename="BowlingClub.java" Intrnl_Id="1"/>
+</SrcFileList>
+<CritList>
+<CritListEntry Name="org.codecover.model.utils.criteria.ConditionCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.BranchCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.StatementCoverage" PluginName="org.codecover"/>
+</CritList>
+<BoolOpList>
+<BoolOp Arity="2" Intrnl_Id="2" Name="conditional and (&amp;&amp;)">
+<BoolAssgnmntBoolMapList>
+<MapEntry BoolAssgnmnt="02" Value="false"/>
+<MapEntry BoolAssgnmnt="10" Value="false"/>
+<MapEntry BoolAssgnmnt="11" Value="true"/>
+</BoolAssgnmntBoolMapList>
+</BoolOp>
+<BoolOp Arity="2" Intrnl_Id="3" Name="conditional or (||)">
+<BoolAssgnmntBoolMapList>
+<MapEntry BoolAssgnmnt="00" Value="false"/>
+<MapEntry BoolAssgnmnt="01" Value="true"/>
+<MapEntry BoolAssgnmnt="12" Value="true"/>
+</BoolAssgnmntBoolMapList>
+</BoolOp>
+<BoolOp Arity="1" Intrnl_Id="4" Name="not (!)">
+<BoolAssgnmntBoolMapList>
+<MapEntry BoolAssgnmnt="1" Value="false"/>
+<MapEntry BoolAssgnmnt="0" Value="true"/>
+</BoolAssgnmntBoolMapList>
+</BoolOp>
+</BoolOpList>
+<HierarchyLvlTypeList>
+<HierarchyLvlType EnglishName="package" IntrnlName="package" Intrnl_Id="5"/>
+<HierarchyLvlType EnglishName="method" IntrnlName="method" Intrnl_Id="6"/>
+<HierarchyLvlType EnglishName="class" IntrnlName="class" Intrnl_Id="7"/>
+<HierarchyLvlType EnglishName="default package" IntrnlName="default package" Intrnl_Id="8"/>
+</HierarchyLvlTypeList>
+<MASTRoot>
+<HierarchyLvl HierarchyLvlId="189" HierarchyLvlTypeId="8" Intrnl_Id="9" Name="default package">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="188" HierarchyLvlTypeId="5" Intrnl_Id="10" Name="pkgbowlingclub">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="187" HierarchyLvlTypeId="7" Intrnl_Id="11" Name="BowlingClub">
+<Header>
+<Loc EndOffset="51" SrcFileId="1" StartOffset="27"/>
+</Header>
+<LocList>
+<Loc EndOffset="3759" SrcFileId="1" StartOffset="27"/>
+</LocList>
+<StmntSeq Intrnl_Id="12">
+<LocList>
+<Loc EndOffset="717" SrcFileId="1" StartOffset="665"/>
+<Loc EndOffset="777" SrcFileId="1" StartOffset="723"/>
+</LocList>
+<BasicStmnt CovItemId="S1" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="13">
+<LocList>
+<Loc EndOffset="717" SrcFileId="1" StartOffset="665"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S2" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="14">
+<LocList>
+<Loc EndOffset="777" SrcFileId="1" StartOffset="723"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+<HierarchyLvl HierarchyLvlId="180" HierarchyLvlTypeId="6" Intrnl_Id="15" Name="BowlingClub">
+<Header>
+<Loc EndOffset="1550" SrcFileId="1" StartOffset="1530"/>
+</Header>
+<LocList>
+<Loc EndOffset="1725" SrcFileId="1" StartOffset="1530"/>
+</LocList>
+<StmntSeq Intrnl_Id="16">
+<LocList>
+<Loc EndOffset="1583" SrcFileId="1" StartOffset="1555"/>
+<Loc EndOffset="1606" SrcFileId="1" StartOffset="1587"/>
+<Loc EndOffset="1631" SrcFileId="1" StartOffset="1610"/>
+<Loc EndOffset="1681" SrcFileId="1" StartOffset="1635"/>
+<Loc EndOffset="1702" SrcFileId="1" StartOffset="1685"/>
+<Loc EndOffset="1720" SrcFileId="1" StartOffset="1706"/>
+</LocList>
+<BasicStmnt CovItemId="S3" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="17">
+<LocList>
+<Loc EndOffset="1583" SrcFileId="1" StartOffset="1555"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S4" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="18">
+<LocList>
+<Loc EndOffset="1606" SrcFileId="1" StartOffset="1587"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S5" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="19">
+<LocList>
+<Loc EndOffset="1631" SrcFileId="1" StartOffset="1610"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S6" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="20">
+<LocList>
+<Loc EndOffset="1681" SrcFileId="1" StartOffset="1635"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S7" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="21">
+<LocList>
+<Loc EndOffset="1702" SrcFileId="1" StartOffset="1685"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S8" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="22">
+<LocList>
+<Loc EndOffset="1720" SrcFileId="1" StartOffset="1706"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="181" HierarchyLvlTypeId="6" Intrnl_Id="23" Name="getGuadagnoGiornaliero">
+<Header>
+<Loc EndOffset="1843" SrcFileId="1" StartOffset="1808"/>
+</Header>
+<LocList>
+<Loc EndOffset="1918" SrcFileId="1" StartOffset="1808"/>
+</LocList>
+<StmntSeq Intrnl_Id="24">
+<LocList>
+<Loc EndOffset="1888" SrcFileId="1" StartOffset="1849"/>
+<Loc EndOffset="1914" SrcFileId="1" StartOffset="1892"/>
+</LocList>
+<CondStmnt CovItemId="S9" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="25">
+<Branch CovItemId="B1" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="false" Intrnl_Id="26">
+<Cond/>
+<LocList>
+<Loc EndOffset="1888" SrcFileId="1" StartOffset="1864"/>
+</LocList>
+<StmntSeq Intrnl_Id="27">
+<LocList>
+<Loc EndOffset="1888" SrcFileId="1" StartOffset="1864"/>
+</LocList>
+<BasicStmnt CovItemId="S10" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="28">
+<LocList>
+<Loc EndOffset="1888" SrcFileId="1" StartOffset="1864"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B2" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="true" Intrnl_Id="29">
+<Cond/>
+<LocList/>
+<StmntSeq Intrnl_Id="30">
+<LocList/>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="1851" SrcFileId="1" StartOffset="1849"/>
+<LocList>
+<Loc EndOffset="1888" SrcFileId="1" StartOffset="1849"/>
+</LocList>
+<RootTerm CovItemId="C1" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="31">
+<BasicBoolTerm Intrnl_Id="32">
+<LocList>
+<Loc EndOffset="1858" SrcFileId="1" StartOffset="1852"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</CondStmnt>
+<BasicStmnt CovItemId="S11" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="33">
+<LocList>
+<Loc EndOffset="1914" SrcFileId="1" StartOffset="1892"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="182" HierarchyLvlTypeId="6" Intrnl_Id="34" Name="getGuadagnoSettimana">
+<Header>
+<Loc EndOffset="1985" SrcFileId="1" StartOffset="1952"/>
+</Header>
+<LocList>
+<Loc EndOffset="2082" SrcFileId="1" StartOffset="1952"/>
+</LocList>
+<StmntSeq Intrnl_Id="35">
+<LocList>
+<Loc EndOffset="2003" SrcFileId="1" StartOffset="1991"/>
+<Loc EndOffset="2063" SrcFileId="1" StartOffset="2007"/>
+<Loc EndOffset="2078" SrcFileId="1" StartOffset="2067"/>
+</LocList>
+<BasicStmnt CovItemId="S12" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="36">
+<LocList>
+<Loc EndOffset="2003" SrcFileId="1" StartOffset="1991"/>
+</LocList>
+</BasicStmnt>
+<LoopStmnt CovItemId="S13" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="37" MltplExecId="L1-2" MltplExecPrefix="pkgbowlingclub.BowlingClub.java" NvrExecId="L1-0" NvrExecPrefix="pkgbowlingclub.BowlingClub.java" OnceExecutedId="L1-1" OnceExecutedPrefix="pkgbowlingclub.BowlingClub.java" OptBodyExec="true">
+<StmntSeq Intrnl_Id="38">
+<LocList>
+<Loc EndOffset="2063" SrcFileId="1" StartOffset="2035"/>
+</LocList>
+<BasicStmnt CovItemId="S14" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="39">
+<LocList>
+<Loc EndOffset="2063" SrcFileId="1" StartOffset="2035"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+<Keyword EndOffset="2010" SrcFileId="1" StartOffset="2007"/>
+<LocList>
+<Loc EndOffset="2063" SrcFileId="1" StartOffset="2007"/>
+</LocList>
+<RootTerm CovItemId="C2" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="40">
+<BasicBoolTerm Intrnl_Id="41">
+<LocList>
+<Loc EndOffset="2025" SrcFileId="1" StartOffset="2022"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</LoopStmnt>
+<BasicStmnt CovItemId="S15" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="42">
+<LocList>
+<Loc EndOffset="2078" SrcFileId="1" StartOffset="2067"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="183" HierarchyLvlTypeId="6" Intrnl_Id="43" Name="chiudiBowlingClub">
+<Header>
+<Loc EndOffset="2243" SrcFileId="1" StartOffset="2212"/>
+</Header>
+<LocList>
+<Loc EndOffset="2553" SrcFileId="1" StartOffset="2212"/>
+</LocList>
+<StmntSeq Intrnl_Id="44">
+<LocList>
+<Loc EndOffset="2549" SrcFileId="1" StartOffset="2249"/>
+</LocList>
+<CondStmnt CovItemId="S16" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="45">
+<Branch CovItemId="B3" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="false" Intrnl_Id="46">
+<Cond/>
+<LocList>
+<Loc EndOffset="2549" SrcFileId="1" StartOffset="2260"/>
+</LocList>
+<StmntSeq Intrnl_Id="47">
+<LocList>
+<Loc EndOffset="2283" SrcFileId="1" StartOffset="2266"/>
+<Loc EndOffset="2298" SrcFileId="1" StartOffset="2288"/>
+<Loc EndOffset="2350" SrcFileId="1" StartOffset="2303"/>
+<Loc EndOffset="2372" SrcFileId="1" StartOffset="2355"/>
+<Loc EndOffset="2411" SrcFileId="1" StartOffset="2377"/>
+<Loc EndOffset="2437" SrcFileId="1" StartOffset="2416"/>
+<Loc EndOffset="2494" SrcFileId="1" StartOffset="2442"/>
+<Loc EndOffset="2544" SrcFileId="1" StartOffset="2499"/>
+</LocList>
+<BasicStmnt CovItemId="S17" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="48">
+<LocList>
+<Loc EndOffset="2283" SrcFileId="1" StartOffset="2266"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S18" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="49">
+<LocList>
+<Loc EndOffset="2298" SrcFileId="1" StartOffset="2288"/>
+</LocList>
+</BasicStmnt>
+<LoopStmnt CovItemId="S19" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="50" MltplExecId="L2-2" MltplExecPrefix="pkgbowlingclub.BowlingClub.java" NvrExecId="L2-0" NvrExecPrefix="pkgbowlingclub.BowlingClub.java" OnceExecutedId="L2-1" OnceExecutedPrefix="pkgbowlingclub.BowlingClub.java" OptBodyExec="true">
+<StmntSeq Intrnl_Id="51">
+<LocList>
+<Loc EndOffset="2334" SrcFileId="1" StartOffset="2321"/>
+<Loc EndOffset="2344" SrcFileId="1" StartOffset="2340"/>
+</LocList>
+<BasicStmnt CovItemId="S20" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="52">
+<LocList>
+<Loc EndOffset="2334" SrcFileId="1" StartOffset="2321"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S21" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="53">
+<LocList>
+<Loc EndOffset="2344" SrcFileId="1" StartOffset="2340"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+<Keyword EndOffset="2308" SrcFileId="1" StartOffset="2303"/>
+<LocList>
+<Loc EndOffset="2350" SrcFileId="1" StartOffset="2303"/>
+</LocList>
+<RootTerm CovItemId="C4" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="54">
+<BasicBoolTerm Intrnl_Id="55">
+<LocList>
+<Loc EndOffset="2312" SrcFileId="1" StartOffset="2309"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</LoopStmnt>
+<BasicStmnt CovItemId="S22" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="56">
+<LocList>
+<Loc EndOffset="2372" SrcFileId="1" StartOffset="2355"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S23" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="57">
+<LocList>
+<Loc EndOffset="2411" SrcFileId="1" StartOffset="2377"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S24" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="58">
+<LocList>
+<Loc EndOffset="2437" SrcFileId="1" StartOffset="2416"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S25" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="59">
+<LocList>
+<Loc EndOffset="2494" SrcFileId="1" StartOffset="2442"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S26" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="60">
+<LocList>
+<Loc EndOffset="2544" SrcFileId="1" StartOffset="2499"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B4" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="true" Intrnl_Id="61">
+<Cond/>
+<LocList/>
+<StmntSeq Intrnl_Id="62">
+<LocList/>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="2251" SrcFileId="1" StartOffset="2249"/>
+<LocList>
+<Loc EndOffset="2549" SrcFileId="1" StartOffset="2249"/>
+</LocList>
+<RootTerm CovItemId="C3" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="63">
+<BasicBoolTerm Intrnl_Id="64">
+<LocList>
+<Loc EndOffset="2258" SrcFileId="1" StartOffset="2252"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="184" HierarchyLvlTypeId="6" Intrnl_Id="65" Name="apriBowlingClub">
+<Header>
+<Loc EndOffset="2702" SrcFileId="1" StartOffset="2673"/>
+</Header>
+<LocList>
+<Loc EndOffset="2845" SrcFileId="1" StartOffset="2673"/>
+</LocList>
+<StmntSeq Intrnl_Id="66">
+<LocList>
+<Loc EndOffset="2841" SrcFileId="1" StartOffset="2708"/>
+</LocList>
+<CondStmnt CovItemId="S27" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="67">
+<Branch CovItemId="B5" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="false" Intrnl_Id="68">
+<Cond/>
+<LocList>
+<Loc EndOffset="2841" SrcFileId="1" StartOffset="2720"/>
+</LocList>
+<StmntSeq Intrnl_Id="69">
+<LocList>
+<Loc EndOffset="2753" SrcFileId="1" StartOffset="2725"/>
+<Loc EndOffset="2776" SrcFileId="1" StartOffset="2757"/>
+<Loc EndOffset="2801" SrcFileId="1" StartOffset="2780"/>
+<Loc EndOffset="2822" SrcFileId="1" StartOffset="2805"/>
+<Loc EndOffset="2840" SrcFileId="1" StartOffset="2826"/>
+</LocList>
+<BasicStmnt CovItemId="S28" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="70">
+<LocList>
+<Loc EndOffset="2753" SrcFileId="1" StartOffset="2725"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S29" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="71">
+<LocList>
+<Loc EndOffset="2776" SrcFileId="1" StartOffset="2757"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S30" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="72">
+<LocList>
+<Loc EndOffset="2801" SrcFileId="1" StartOffset="2780"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S31" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="73">
+<LocList>
+<Loc EndOffset="2822" SrcFileId="1" StartOffset="2805"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S32" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="74">
+<LocList>
+<Loc EndOffset="2840" SrcFileId="1" StartOffset="2826"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B6" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="true" Intrnl_Id="75">
+<Cond/>
+<LocList/>
+<StmntSeq Intrnl_Id="76">
+<LocList/>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="2710" SrcFileId="1" StartOffset="2708"/>
+<LocList>
+<Loc EndOffset="2841" SrcFileId="1" StartOffset="2708"/>
+</LocList>
+<RootTerm CovItemId="C5" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="77">
+<OpTerm BooleanOpId="4" Intrnl_Id="78">
+<BasicBoolTerm Intrnl_Id="79">
+<LocList>
+<Loc EndOffset="2718" SrcFileId="1" StartOffset="2712"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="2712" SrcFileId="1" StartOffset="2711"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="185" HierarchyLvlTypeId="6" Intrnl_Id="80" Name="occupaPista">
+<Header>
+<Loc EndOffset="3115" SrcFileId="1" StartOffset="3078"/>
+</Header>
+<LocList>
+<Loc EndOffset="3570" SrcFileId="1" StartOffset="3078"/>
+</LocList>
+<StmntSeq Intrnl_Id="81">
+<LocList>
+<Loc EndOffset="3145" SrcFileId="1" StartOffset="3121"/>
+<Loc EndOffset="3206" SrcFileId="1" StartOffset="3149"/>
+<Loc EndOffset="3231" SrcFileId="1" StartOffset="3210"/>
+<Loc EndOffset="3387" SrcFileId="1" StartOffset="3298"/>
+<Loc EndOffset="3429" SrcFileId="1" StartOffset="3395"/>
+<Loc EndOffset="3468" SrcFileId="1" StartOffset="3437"/>
+<Loc EndOffset="3505" SrcFileId="1" StartOffset="3472"/>
+<Loc EndOffset="3539" SrcFileId="1" StartOffset="3513"/>
+<Loc EndOffset="3566" SrcFileId="1" StartOffset="3547"/>
+</LocList>
+<CondStmnt CovItemId="S33" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="82">
+<Branch CovItemId="B7" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="false" Intrnl_Id="83">
+<Cond/>
+<LocList>
+<Loc EndOffset="3145" SrcFileId="1" StartOffset="3133"/>
+</LocList>
+<StmntSeq Intrnl_Id="84">
+<LocList>
+<Loc EndOffset="3144" SrcFileId="1" StartOffset="3134"/>
+</LocList>
+<BasicStmnt CovItemId="S34" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="85">
+<LocList>
+<Loc EndOffset="3144" SrcFileId="1" StartOffset="3134"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B8" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="true" Intrnl_Id="86">
+<Cond/>
+<LocList/>
+<StmntSeq Intrnl_Id="87">
+<LocList/>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="3123" SrcFileId="1" StartOffset="3121"/>
+<LocList>
+<Loc EndOffset="3145" SrcFileId="1" StartOffset="3121"/>
+</LocList>
+<RootTerm CovItemId="C6" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="88">
+<OpTerm BooleanOpId="4" Intrnl_Id="89">
+<BasicBoolTerm Intrnl_Id="90">
+<LocList>
+<Loc EndOffset="3131" SrcFileId="1" StartOffset="3125"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="3125" SrcFileId="1" StartOffset="3124"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</CondStmnt>
+<CondStmnt CovItemId="S35" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="91">
+<Branch CovItemId="B9" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="false" Intrnl_Id="92">
+<Cond/>
+<LocList>
+<Loc EndOffset="3206" SrcFileId="1" StartOffset="3194"/>
+</LocList>
+<StmntSeq Intrnl_Id="93">
+<LocList>
+<Loc EndOffset="3205" SrcFileId="1" StartOffset="3195"/>
+</LocList>
+<BasicStmnt CovItemId="S36" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="94">
+<LocList>
+<Loc EndOffset="3205" SrcFileId="1" StartOffset="3195"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B10" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="true" Intrnl_Id="95">
+<Cond/>
+<LocList/>
+<StmntSeq Intrnl_Id="96">
+<LocList/>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="3151" SrcFileId="1" StartOffset="3149"/>
+<LocList>
+<Loc EndOffset="3206" SrcFileId="1" StartOffset="3149"/>
+</LocList>
+<RootTerm CovItemId="C7" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="97">
+<OpTerm BooleanOpId="3" Intrnl_Id="98">
+<BasicBoolTerm Intrnl_Id="99">
+<LocList>
+<Loc EndOffset="3179" SrcFileId="1" StartOffset="3152"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="100">
+<LocList>
+<Loc EndOffset="3192" SrcFileId="1" StartOffset="3181"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="3181" SrcFileId="1" StartOffset="3179"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</CondStmnt>
+<BasicStmnt CovItemId="S37" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="101">
+<LocList>
+<Loc EndOffset="3231" SrcFileId="1" StartOffset="3210"/>
+</LocList>
+</BasicStmnt>
+<LoopStmnt CovItemId="S38" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="102" MltplExecId="L3-2" MltplExecPrefix="pkgbowlingclub.BowlingClub.java" NvrExecId="L3-0" NvrExecPrefix="pkgbowlingclub.BowlingClub.java" OnceExecutedId="L3-1" OnceExecutedPrefix="pkgbowlingclub.BowlingClub.java" OptBodyExec="true">
+<StmntSeq Intrnl_Id="103">
+<LocList>
+<Loc EndOffset="3382" SrcFileId="1" StartOffset="3330"/>
+</LocList>
+<CondStmnt CovItemId="S39" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="104">
+<Branch CovItemId="B11" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="false" Intrnl_Id="105">
+<Cond/>
+<LocList>
+<Loc EndOffset="3382" SrcFileId="1" StartOffset="3346"/>
+</LocList>
+<StmntSeq Intrnl_Id="106">
+<LocList>
+<Loc EndOffset="3369" SrcFileId="1" StartOffset="3353"/>
+<Loc EndOffset="3381" SrcFileId="1" StartOffset="3375"/>
+</LocList>
+<BasicStmnt CovItemId="S40" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="107">
+<LocList>
+<Loc EndOffset="3369" SrcFileId="1" StartOffset="3353"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S41" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="108">
+<LocList>
+<Loc EndOffset="3381" SrcFileId="1" StartOffset="3375"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B12" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="true" Intrnl_Id="109">
+<Cond/>
+<LocList/>
+<StmntSeq Intrnl_Id="110">
+<LocList/>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="3332" SrcFileId="1" StartOffset="3330"/>
+<LocList>
+<Loc EndOffset="3382" SrcFileId="1" StartOffset="3330"/>
+</LocList>
+<RootTerm CovItemId="C9" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="111">
+<BasicBoolTerm Intrnl_Id="112">
+<LocList>
+<Loc EndOffset="3344" SrcFileId="1" StartOffset="3333"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+<Keyword EndOffset="3301" SrcFileId="1" StartOffset="3298"/>
+<LocList>
+<Loc EndOffset="3387" SrcFileId="1" StartOffset="3298"/>
+</LocList>
+<RootTerm CovItemId="C8" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="113">
+<BasicBoolTerm Intrnl_Id="114">
+<LocList>
+<Loc EndOffset="3318" SrcFileId="1" StartOffset="3313"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</LoopStmnt>
+<CondStmnt CovItemId="S42" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="115">
+<Branch CovItemId="B13" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="false" Intrnl_Id="116">
+<Cond/>
+<LocList>
+<Loc EndOffset="3429" SrcFileId="1" StartOffset="3417"/>
+</LocList>
+<StmntSeq Intrnl_Id="117">
+<LocList>
+<Loc EndOffset="3428" SrcFileId="1" StartOffset="3418"/>
+</LocList>
+<BasicStmnt CovItemId="S43" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="118">
+<LocList>
+<Loc EndOffset="3428" SrcFileId="1" StartOffset="3418"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B14" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="true" Intrnl_Id="119">
+<Cond/>
+<LocList/>
+<StmntSeq Intrnl_Id="120">
+<LocList/>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="3397" SrcFileId="1" StartOffset="3395"/>
+<LocList>
+<Loc EndOffset="3429" SrcFileId="1" StartOffset="3395"/>
+</LocList>
+<RootTerm CovItemId="C10" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="121">
+<BasicBoolTerm Intrnl_Id="122">
+<LocList>
+<Loc EndOffset="3415" SrcFileId="1" StartOffset="3398"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</CondStmnt>
+<BasicStmnt CovItemId="S44" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="123">
+<LocList>
+<Loc EndOffset="3468" SrcFileId="1" StartOffset="3437"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S45" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="124">
+<LocList>
+<Loc EndOffset="3505" SrcFileId="1" StartOffset="3472"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S46" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="125">
+<LocList>
+<Loc EndOffset="3539" SrcFileId="1" StartOffset="3513"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S47" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="126">
+<LocList>
+<Loc EndOffset="3566" SrcFileId="1" StartOffset="3547"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="186" HierarchyLvlTypeId="6" Intrnl_Id="127" Name="liberaPista">
+<Header>
+<Loc EndOffset="3707" SrcFileId="1" StartOffset="3677"/>
+</Header>
+<LocList>
+<Loc EndOffset="3756" SrcFileId="1" StartOffset="3677"/>
+</LocList>
+<StmntSeq Intrnl_Id="128">
+<LocList>
+<Loc EndOffset="3752" SrcFileId="1" StartOffset="3713"/>
+</LocList>
+<CondStmnt CovItemId="S48" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="129">
+<Branch CovItemId="B15" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="false" Intrnl_Id="130">
+<Cond/>
+<LocList>
+<Loc EndOffset="3752" SrcFileId="1" StartOffset="3728"/>
+</LocList>
+<StmntSeq Intrnl_Id="131">
+<LocList>
+<Loc EndOffset="3747" SrcFileId="1" StartOffset="3734"/>
+</LocList>
+<BasicStmnt CovItemId="S49" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="132">
+<LocList>
+<Loc EndOffset="3747" SrcFileId="1" StartOffset="3734"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B16" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Implct="true" Intrnl_Id="133">
+<Cond/>
+<LocList/>
+<StmntSeq Intrnl_Id="134">
+<LocList/>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="3715" SrcFileId="1" StartOffset="3713"/>
+<LocList>
+<Loc EndOffset="3752" SrcFileId="1" StartOffset="3713"/>
+</LocList>
+<RootTerm CovItemId="C11" CovItemPrefix="pkgbowlingclub.BowlingClub.java" Intrnl_Id="135">
+<OpTerm BooleanOpId="2" Intrnl_Id="136">
+<BasicBoolTerm Intrnl_Id="137">
+<LocList>
+<Loc EndOffset="3720" SrcFileId="1" StartOffset="3716"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="138">
+<LocList>
+<Loc EndOffset="3726" SrcFileId="1" StartOffset="3722"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="3722" SrcFileId="1" StartOffset="3720"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+</MASTRoot>
+<TestSession Comment="" Date="1706203036788" Name="Jan 25, 2024 6:17:16 PM">
+<TestCase Comment="" Date="1706203036589" Name="pkgbowlingclub.BowlingClubTest:MCDCCoverage">
+<CovList>
+<CovPrefix CovItemPrefix="pkgbowlingclub.BowlingClub.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B10" Value="7"/>
+<Cov CovItemId="B11" Value="4"/>
+<Cov CovItemId="B12" Value="18"/>
+<Cov CovItemId="B13" Value="3"/>
+<Cov CovItemId="B14" Value="4"/>
+<Cov CovItemId="B15" Value="1"/>
+<Cov CovItemId="B16" Value="2"/>
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B3" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="B7" Value="1"/>
+<Cov CovItemId="B8" Value="11"/>
+<Cov CovItemId="B9" Value="4"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S10" Value="1"/>
+<Cov CovItemId="S11" Value="1"/>
+<Cov CovItemId="S12" Value="1"/>
+<Cov CovItemId="S13" Value="1"/>
+<Cov CovItemId="S14" Value="7"/>
+<Cov CovItemId="S15" Value="1"/>
+<Cov CovItemId="S16" Value="2"/>
+<Cov CovItemId="S17" Value="1"/>
+<Cov CovItemId="S18" Value="1"/>
+<Cov CovItemId="S19" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+<Cov CovItemId="S20" Value="4"/>
+<Cov CovItemId="S21" Value="4"/>
+<Cov CovItemId="S22" Value="1"/>
+<Cov CovItemId="S23" Value="1"/>
+<Cov CovItemId="S24" Value="1"/>
+<Cov CovItemId="S25" Value="1"/>
+<Cov CovItemId="S26" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S33" Value="12"/>
+<Cov CovItemId="S34" Value="1"/>
+<Cov CovItemId="S35" Value="11"/>
+<Cov CovItemId="S36" Value="4"/>
+<Cov CovItemId="S37" Value="7"/>
+<Cov CovItemId="S38" Value="7"/>
+<Cov CovItemId="S39" Value="22"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S40" Value="4"/>
+<Cov CovItemId="S41" Value="4"/>
+<Cov CovItemId="S42" Value="7"/>
+<Cov CovItemId="S43" Value="3"/>
+<Cov CovItemId="S44" Value="4"/>
+<Cov CovItemId="S45" Value="4"/>
+<Cov CovItemId="S46" Value="4"/>
+<Cov CovItemId="S47" Value="4"/>
+<Cov CovItemId="S48" Value="3"/>
+<Cov CovItemId="S49" Value="1"/>
+<Cov CovItemId="S5" Value="1"/>
+<Cov CovItemId="S6" Value="1"/>
+<Cov CovItemId="S7" Value="1"/>
+<Cov CovItemId="S8" Value="1"/>
+<Cov CovItemId="S9" Value="2"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="pkgbowlingclub.BowlingClub.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C10">
+<MapEntry BoolAssgnmnt="0" Value="4"/>
+<MapEntry BoolAssgnmnt="1" Value="3"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C11">
+<MapEntry BoolAssgnmnt="02" Value="1"/>
+<MapEntry BoolAssgnmnt="10" Value="1"/>
+<MapEntry BoolAssgnmnt="11" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="7"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C3">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C4">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="4"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C6">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="11"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C7">
+<MapEntry BoolAssgnmnt="00" Value="7"/>
+<MapEntry BoolAssgnmnt="01" Value="1"/>
+<MapEntry BoolAssgnmnt="12" Value="3"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C8">
+<MapEntry BoolAssgnmnt="0" Value="3"/>
+<MapEntry BoolAssgnmnt="1" Value="22"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C9">
+<MapEntry BoolAssgnmnt="0" Value="18"/>
+<MapEntry BoolAssgnmnt="1" Value="4"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1706203036606" Name="pkgbowlingclub.BowlingClubTest:BranchCoverage">
+<CovList>
+<CovPrefix CovItemPrefix="pkgbowlingclub.BowlingClub.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B10" Value="7"/>
+<Cov CovItemId="B11" Value="4"/>
+<Cov CovItemId="B12" Value="18"/>
+<Cov CovItemId="B13" Value="3"/>
+<Cov CovItemId="B14" Value="4"/>
+<Cov CovItemId="B15" Value="1"/>
+<Cov CovItemId="B16" Value="1"/>
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B3" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="B5" Value="1"/>
+<Cov CovItemId="B6" Value="1"/>
+<Cov CovItemId="B7" Value="1"/>
+<Cov CovItemId="B8" Value="10"/>
+<Cov CovItemId="B9" Value="3"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S10" Value="1"/>
+<Cov CovItemId="S11" Value="1"/>
+<Cov CovItemId="S12" Value="1"/>
+<Cov CovItemId="S13" Value="1"/>
+<Cov CovItemId="S14" Value="7"/>
+<Cov CovItemId="S15" Value="1"/>
+<Cov CovItemId="S16" Value="2"/>
+<Cov CovItemId="S17" Value="1"/>
+<Cov CovItemId="S18" Value="1"/>
+<Cov CovItemId="S19" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+<Cov CovItemId="S20" Value="4"/>
+<Cov CovItemId="S21" Value="4"/>
+<Cov CovItemId="S22" Value="1"/>
+<Cov CovItemId="S23" Value="1"/>
+<Cov CovItemId="S24" Value="1"/>
+<Cov CovItemId="S25" Value="1"/>
+<Cov CovItemId="S26" Value="1"/>
+<Cov CovItemId="S27" Value="2"/>
+<Cov CovItemId="S28" Value="1"/>
+<Cov CovItemId="S29" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S30" Value="1"/>
+<Cov CovItemId="S31" Value="1"/>
+<Cov CovItemId="S32" Value="1"/>
+<Cov CovItemId="S33" Value="11"/>
+<Cov CovItemId="S34" Value="1"/>
+<Cov CovItemId="S35" Value="10"/>
+<Cov CovItemId="S36" Value="3"/>
+<Cov CovItemId="S37" Value="7"/>
+<Cov CovItemId="S38" Value="7"/>
+<Cov CovItemId="S39" Value="22"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S40" Value="4"/>
+<Cov CovItemId="S41" Value="4"/>
+<Cov CovItemId="S42" Value="7"/>
+<Cov CovItemId="S43" Value="3"/>
+<Cov CovItemId="S44" Value="4"/>
+<Cov CovItemId="S45" Value="4"/>
+<Cov CovItemId="S46" Value="4"/>
+<Cov CovItemId="S47" Value="4"/>
+<Cov CovItemId="S48" Value="2"/>
+<Cov CovItemId="S49" Value="1"/>
+<Cov CovItemId="S5" Value="1"/>
+<Cov CovItemId="S6" Value="1"/>
+<Cov CovItemId="S7" Value="1"/>
+<Cov CovItemId="S8" Value="1"/>
+<Cov CovItemId="S9" Value="2"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="pkgbowlingclub.BowlingClub.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C10">
+<MapEntry BoolAssgnmnt="0" Value="4"/>
+<MapEntry BoolAssgnmnt="1" Value="3"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C11">
+<MapEntry BoolAssgnmnt="10" Value="1"/>
+<MapEntry BoolAssgnmnt="11" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="7"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C3">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C4">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="4"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C5">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C6">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="10"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C7">
+<MapEntry BoolAssgnmnt="00" Value="7"/>
+<MapEntry BoolAssgnmnt="01" Value="1"/>
+<MapEntry BoolAssgnmnt="12" Value="2"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C8">
+<MapEntry BoolAssgnmnt="0" Value="3"/>
+<MapEntry BoolAssgnmnt="1" Value="22"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C9">
+<MapEntry BoolAssgnmnt="0" Value="18"/>
+<MapEntry BoolAssgnmnt="1" Value="4"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1706203036616" Name="pkgbowlingclub.BowlingClubTest:statementCoverage">
+<CovList>
+<CovPrefix CovItemPrefix="pkgbowlingclub.BowlingClub.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B10" Value="7"/>
+<Cov CovItemId="B11" Value="4"/>
+<Cov CovItemId="B12" Value="18"/>
+<Cov CovItemId="B13" Value="3"/>
+<Cov CovItemId="B14" Value="4"/>
+<Cov CovItemId="B15" Value="1"/>
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B3" Value="1"/>
+<Cov CovItemId="B5" Value="1"/>
+<Cov CovItemId="B7" Value="1"/>
+<Cov CovItemId="B8" Value="10"/>
+<Cov CovItemId="B9" Value="3"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S10" Value="1"/>
+<Cov CovItemId="S11" Value="1"/>
+<Cov CovItemId="S12" Value="1"/>
+<Cov CovItemId="S13" Value="1"/>
+<Cov CovItemId="S14" Value="7"/>
+<Cov CovItemId="S15" Value="1"/>
+<Cov CovItemId="S16" Value="1"/>
+<Cov CovItemId="S17" Value="1"/>
+<Cov CovItemId="S18" Value="1"/>
+<Cov CovItemId="S19" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+<Cov CovItemId="S20" Value="4"/>
+<Cov CovItemId="S21" Value="4"/>
+<Cov CovItemId="S22" Value="1"/>
+<Cov CovItemId="S23" Value="1"/>
+<Cov CovItemId="S24" Value="1"/>
+<Cov CovItemId="S25" Value="1"/>
+<Cov CovItemId="S26" Value="1"/>
+<Cov CovItemId="S27" Value="1"/>
+<Cov CovItemId="S28" Value="1"/>
+<Cov CovItemId="S29" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S30" Value="1"/>
+<Cov CovItemId="S31" Value="1"/>
+<Cov CovItemId="S32" Value="1"/>
+<Cov CovItemId="S33" Value="11"/>
+<Cov CovItemId="S34" Value="1"/>
+<Cov CovItemId="S35" Value="10"/>
+<Cov CovItemId="S36" Value="3"/>
+<Cov CovItemId="S37" Value="7"/>
+<Cov CovItemId="S38" Value="7"/>
+<Cov CovItemId="S39" Value="22"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S40" Value="4"/>
+<Cov CovItemId="S41" Value="4"/>
+<Cov CovItemId="S42" Value="7"/>
+<Cov CovItemId="S43" Value="3"/>
+<Cov CovItemId="S44" Value="4"/>
+<Cov CovItemId="S45" Value="4"/>
+<Cov CovItemId="S46" Value="4"/>
+<Cov CovItemId="S47" Value="4"/>
+<Cov CovItemId="S48" Value="1"/>
+<Cov CovItemId="S49" Value="1"/>
+<Cov CovItemId="S5" Value="1"/>
+<Cov CovItemId="S6" Value="1"/>
+<Cov CovItemId="S7" Value="1"/>
+<Cov CovItemId="S8" Value="1"/>
+<Cov CovItemId="S9" Value="2"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="pkgbowlingclub.BowlingClub.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C10">
+<MapEntry BoolAssgnmnt="0" Value="4"/>
+<MapEntry BoolAssgnmnt="1" Value="3"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C11">
+<MapEntry BoolAssgnmnt="11" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="7"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C3">
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C4">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="4"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C5">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C6">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="10"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C7">
+<MapEntry BoolAssgnmnt="00" Value="7"/>
+<MapEntry BoolAssgnmnt="01" Value="1"/>
+<MapEntry BoolAssgnmnt="12" Value="2"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C8">
+<MapEntry BoolAssgnmnt="0" Value="3"/>
+<MapEntry BoolAssgnmnt="1" Value="22"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C9">
+<MapEntry BoolAssgnmnt="0" Value="18"/>
+<MapEntry BoolAssgnmnt="1" Value="4"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1706203036624" Name="pkgbowlingclub.BowlingClubTest:JunitTesting">
+<CovList>
+<CovPrefix CovItemPrefix="pkgbowlingclub.BowlingClub.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B10" Value="7"/>
+<Cov CovItemId="B11" Value="7"/>
+<Cov CovItemId="B12" Value="6"/>
+<Cov CovItemId="B14" Value="7"/>
+<Cov CovItemId="B15" Value="3"/>
+<Cov CovItemId="B2" Value="2"/>
+<Cov CovItemId="B3" Value="2"/>
+<Cov CovItemId="B5" Value="1"/>
+<Cov CovItemId="B8" Value="7"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S10" Value="1"/>
+<Cov CovItemId="S11" Value="2"/>
+<Cov CovItemId="S12" Value="1"/>
+<Cov CovItemId="S13" Value="1"/>
+<Cov CovItemId="S14" Value="7"/>
+<Cov CovItemId="S15" Value="1"/>
+<Cov CovItemId="S16" Value="2"/>
+<Cov CovItemId="S17" Value="2"/>
+<Cov CovItemId="S18" Value="2"/>
+<Cov CovItemId="S19" Value="2"/>
+<Cov CovItemId="S2" Value="1"/>
+<Cov CovItemId="S20" Value="8"/>
+<Cov CovItemId="S21" Value="8"/>
+<Cov CovItemId="S22" Value="2"/>
+<Cov CovItemId="S23" Value="2"/>
+<Cov CovItemId="S24" Value="2"/>
+<Cov CovItemId="S25" Value="2"/>
+<Cov CovItemId="S26" Value="2"/>
+<Cov CovItemId="S27" Value="1"/>
+<Cov CovItemId="S28" Value="1"/>
+<Cov CovItemId="S29" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S30" Value="1"/>
+<Cov CovItemId="S31" Value="1"/>
+<Cov CovItemId="S32" Value="1"/>
+<Cov CovItemId="S33" Value="7"/>
+<Cov CovItemId="S35" Value="7"/>
+<Cov CovItemId="S37" Value="7"/>
+<Cov CovItemId="S38" Value="7"/>
+<Cov CovItemId="S39" Value="13"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S40" Value="7"/>
+<Cov CovItemId="S41" Value="7"/>
+<Cov CovItemId="S42" Value="7"/>
+<Cov CovItemId="S44" Value="7"/>
+<Cov CovItemId="S45" Value="7"/>
+<Cov CovItemId="S46" Value="7"/>
+<Cov CovItemId="S47" Value="7"/>
+<Cov CovItemId="S48" Value="3"/>
+<Cov CovItemId="S49" Value="3"/>
+<Cov CovItemId="S5" Value="1"/>
+<Cov CovItemId="S6" Value="1"/>
+<Cov CovItemId="S7" Value="1"/>
+<Cov CovItemId="S8" Value="1"/>
+<Cov CovItemId="S9" Value="3"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="pkgbowlingclub.BowlingClub.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="2"/>
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C10">
+<MapEntry BoolAssgnmnt="0" Value="7"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C11">
+<MapEntry BoolAssgnmnt="11" Value="3"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+<MapEntry BoolAssgnmnt="1" Value="7"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C3">
+<MapEntry BoolAssgnmnt="1" Value="2"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C4">
+<MapEntry BoolAssgnmnt="0" Value="2"/>
+<MapEntry BoolAssgnmnt="1" Value="8"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C5">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C6">
+<MapEntry BoolAssgnmnt="1" Value="7"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C7">
+<MapEntry BoolAssgnmnt="00" Value="7"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C8">
+<MapEntry BoolAssgnmnt="1" Value="13"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="1" RootTermCovItemId="C9">
+<MapEntry BoolAssgnmnt="0" Value="6"/>
+<MapEntry BoolAssgnmnt="1" Value="7"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+</TestSessionContainer>

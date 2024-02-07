@@ -1,0 +1,132 @@
+scenario Scenario1
+
+load BowlingClub.asm
+
+set liberaPista := NESSUNA;
+set nuoviGiocatori := ZERO;
+set apriClub := false;
+set chiudiClub := false;
+step
+check statoClub = CHIUSO;
+set liberaPista := NESSUNA;
+set nuoviGiocatori := QUATTRO;
+set apriClub := false;
+set chiudiClub := false;
+step
+check statoClub = CHIUSO;
+set liberaPista := NESSUNA;
+set nuoviGiocatori := ZERO;
+set apriClub := true;
+set chiudiClub := false;
+step
+check statoClub = APERTO;
+check statoPista(PRIMA) = ZERO;
+check statoPista(TERZA) = ZERO;
+check statoPista(SECONDA) = ZERO;
+check statoPista(QUARTA) = ZERO;
+check guadagnoGiornaliero = 0;
+set liberaPista := NESSUNA;
+set nuoviGiocatori := QUATTRO;
+set apriClub := false;
+set chiudiClub := false;
+step
+check statoClub = APERTO;
+check statoPista(PRIMA) = ZERO;
+check statoPista(TERZA) = ZERO;
+check statoPista(SECONDA) = QUATTRO;
+check statoPista(QUARTA) = ZERO;
+check guadagnoGiornaliero = 60;
+set liberaPista := NESSUNA;
+set nuoviGiocatori := DUE;
+set apriClub := false;
+set chiudiClub := false;
+step
+check statoClub = APERTO;
+check statoPista(PRIMA) = DUE;
+check statoPista(TERZA) = ZERO;
+check statoPista(SECONDA) = QUATTRO;
+check statoPista(QUARTA) = ZERO;
+check guadagnoGiornaliero = 90;
+check giornoCorrente = LUN;
+set liberaPista := NESSUNA;
+set nuoviGiocatori := ZERO;
+set apriClub := false;
+set chiudiClub := true;
+step
+check statoClub = CHIUSO;
+check statoPista(PRIMA) = ZERO;
+check statoPista(TERZA) = ZERO;
+check statoPista(SECONDA) = ZERO;
+check statoPista(QUARTA) = ZERO;
+check guadagnoGiornaliero = 0;
+check giornoCorrente = MAR;
+check guadagnoSettimanale(LUN) = 90;
+set liberaPista := NESSUNA;
+set nuoviGiocatori := ZERO;
+set apriClub := true;
+set chiudiClub := false;
+step
+check statoClub = APERTO;
+check statoPista(PRIMA) = ZERO;
+check statoPista(TERZA) = ZERO;
+check statoPista(SECONDA) = ZERO;
+check statoPista(QUARTA) = ZERO;
+check guadagnoGiornaliero = 0;
+check giornoCorrente = MAR;
+check guadagnoSettimanale(LUN) = 90;
+set liberaPista := NESSUNA;
+set nuoviGiocatori := TRE;
+set apriClub := false;
+set chiudiClub := false;
+step
+check statoClub = APERTO;
+check statoPista(PRIMA) = ZERO;
+check statoPista(TERZA) = ZERO;
+check statoPista(SECONDA) = TRE;
+check statoPista(QUARTA) = ZERO;
+check guadagnoGiornaliero = 45;
+check giornoCorrente = MAR;
+check guadagnoSettimanale(LUN) = 90;
+set liberaPista := SECONDA;
+set nuoviGiocatori := ZERO;
+set apriClub := false;
+set chiudiClub := false;
+step
+check statoClub = APERTO;
+check statoPista(PRIMA) = ZERO;
+check statoPista(TERZA) = ZERO;
+check statoPista(SECONDA) = ZERO;
+check statoPista(QUARTA) = ZERO;
+check guadagnoGiornaliero = 45;
+check giornoCorrente = MAR;
+check guadagnoSettimanale(LUN) = 90;
+set liberaPista := NESSUNA;
+set nuoviGiocatori := QUATTRO;
+set apriClub := false;
+set chiudiClub := false;
+step
+check statoClub = APERTO;
+check statoPista(PRIMA) = ZERO;
+check statoPista(TERZA) = ZERO;
+check statoPista(SECONDA) = QUATTRO;
+check statoPista(QUARTA) = ZERO;
+check guadagnoGiornaliero = 105;
+check giornoCorrente = MAR;
+check guadagnoSettimanale(LUN) = 90;
+set liberaPista := NESSUNA;
+set nuoviGiocatori := ZERO;
+set apriClub := false;
+set chiudiClub := true;
+step
+check statoClub = CHIUSO;
+check statoPista(PRIMA) = ZERO;
+check statoPista(TERZA) = ZERO;
+check statoPista(SECONDA) = ZERO;
+check statoPista(QUARTA) = ZERO;
+check guadagnoGiornaliero = 0;
+check giornoCorrente = MER;
+check guadagnoSettimanale(LUN) = 90;
+check guadagnoSettimanale(MAR) = 105;
+set apriClub := false;
+set chiudiClub := false;
+step

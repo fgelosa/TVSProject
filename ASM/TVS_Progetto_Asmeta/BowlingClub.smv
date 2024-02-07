@@ -1,0 +1,82 @@
+--file C:\Users\Memesman\Desktop\Progetto\Workspace Eclipse TVS\ASM\TVS_Progetto_Asmeta\BowlingClub.smv
+-- options: flatten? false
+MODULE main
+	VAR
+		apriClub: boolean; --monitored
+		chiudiClub: boolean; --monitored
+		giornoCorrente: {DGIORNISETTIMANA_UNDEF, DOM, GIO, LUN, MAR, MER, SAB, VEN}; --controlled
+		guadagnoGiornaliero: {-2147483647, 0, 1, 10, 100, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 3, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 4, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 5, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 6, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 7, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 8, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 9, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99}; --controlled
+		liberaPista: {NESSUNA, PRIMA, QUARTA, SECONDA, TERZA}; --monitored
+		nuoviGiocatori: {DUE, QUATTRO, TRE, UNO, ZERO}; --monitored
+		statoClub: {APERTO, CHIUSO, DSTATOCLUB_UNDEF}; --controlled
+		statoPista_NESSUNA: {DGIOCATORI_UNDEF, DUE, QUATTRO, TRE, UNO, ZERO}; --controlled
+		statoPista_PRIMA: {DGIOCATORI_UNDEF, DUE, QUATTRO, TRE, UNO, ZERO}; --controlled
+		statoPista_QUARTA: {DGIOCATORI_UNDEF, DUE, QUATTRO, TRE, UNO, ZERO}; --controlled
+		statoPista_SECONDA: {DGIOCATORI_UNDEF, DUE, QUATTRO, TRE, UNO, ZERO}; --controlled
+		statoPista_TERZA: {DGIOCATORI_UNDEF, DUE, QUATTRO, TRE, UNO, ZERO}; --controlled
+		--declaration of choose variables
+		var_$pistaLibera_0: {NESSUNA, PRIMA, QUARTA, SECONDA, TERZA};
+	CONSTANTS DGIORNISETTIMANA_UNDEF, DOM, GIO, LUN, MAR, MER, SAB, VEN, DSTATOCLUB_UNDEF, APERTO, CHIUSO, DGIOCATORI_UNDEF, DUE, QUATTRO, TRE, UNO, ZERO, DPISTA_UNDEF, NESSUNA, PRIMA, QUARTA, SECONDA, TERZA;
+	ASSIGN
+		init(giornoCorrente) := LUN;
+		init(guadagnoGiornaliero) := 0;
+		init(statoClub) := CHIUSO;
+		init(statoPista_NESSUNA) := ZERO;
+		init(statoPista_PRIMA) := ZERO;
+		init(statoPista_QUARTA) := ZERO;
+		init(statoPista_SECONDA) := ZERO;
+		init(statoPista_TERZA) := ZERO;
+		next(giornoCorrente) :=
+			case
+				((((chiudiClub & !(apriClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO)) & (giornoCorrente = SAB)): DOM;
+				((giornoCorrente = DOM) & (((chiudiClub & !(apriClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO))): LUN;
+				((giornoCorrente = MAR) & (((chiudiClub & !(apriClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO))): MER;
+				((((chiudiClub & !(apriClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO)) & (giornoCorrente = GIO)): VEN;
+				((((chiudiClub & !(apriClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO)) & (giornoCorrente = LUN)): MAR;
+				((giornoCorrente = VEN) & (((chiudiClub & !(apriClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO))): SAB;
+				((giornoCorrente = MER) & (((chiudiClub & !(apriClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO))): GIO;
+				TRUE: giornoCorrente;
+			esac;
+		next(guadagnoGiornaliero) :=
+			case
+				(((((statoPista_QUARTA = ZERO) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (nuoviGiocatori = UNO) & (var_$pistaLibera_0 = QUARTA)) | ((var_$pistaLibera_0 = PRIMA) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (statoPista_PRIMA = ZERO) & (nuoviGiocatori = UNO))) | ((var_$pistaLibera_0 = SECONDA) & (statoPista_SECONDA = ZERO) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (nuoviGiocatori = UNO))) | ((var_$pistaLibera_0 = TERZA) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (statoPista_TERZA = ZERO) & (nuoviGiocatori = UNO))) & (guadagnoGiornaliero + 15) in {-2147483647, 0, 1, 10, 100, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 3, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 4, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 5, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 6, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 7, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 8, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 9, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99}: (guadagnoGiornaliero + 15);
+				(((chiudiClub & !(apriClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO)) & 0 in {-2147483647, 0, 1, 10, 100, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 3, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 4, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 5, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 6, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 7, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 8, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 9, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99}: 0;
+				((((var_$pistaLibera_0 = SECONDA) & (statoPista_SECONDA = ZERO) & (nuoviGiocatori = QUATTRO) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO)) | (((var_$pistaLibera_0 = PRIMA) & (nuoviGiocatori = QUATTRO) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (statoPista_PRIMA = ZERO)) | ((statoPista_QUARTA = ZERO) & (nuoviGiocatori = QUATTRO) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (var_$pistaLibera_0 = QUARTA)))) | ((var_$pistaLibera_0 = TERZA) & (nuoviGiocatori = QUATTRO) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (statoPista_TERZA = ZERO))) & (guadagnoGiornaliero + 60) in {-2147483647, 0, 1, 10, 100, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 3, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 4, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 5, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 6, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 7, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 8, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 9, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99}: (guadagnoGiornaliero + 60);
+				(((var_$pistaLibera_0 = TERZA) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (nuoviGiocatori = DUE) & (statoClub = APERTO) & (statoPista_TERZA = ZERO)) | ((((statoPista_QUARTA = ZERO) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (nuoviGiocatori = DUE) & (statoClub = APERTO) & (var_$pistaLibera_0 = QUARTA)) | ((var_$pistaLibera_0 = PRIMA) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (nuoviGiocatori = DUE) & (statoClub = APERTO) & (statoPista_PRIMA = ZERO))) | ((var_$pistaLibera_0 = SECONDA) & (statoPista_SECONDA = ZERO) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (nuoviGiocatori = DUE) & (statoClub = APERTO)))) & (guadagnoGiornaliero + 30) in {-2147483647, 0, 1, 10, 100, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 3, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 4, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 5, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 6, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 7, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 8, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 9, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99}: (guadagnoGiornaliero + 30);
+				(((var_$pistaLibera_0 = TERZA) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (statoPista_TERZA = ZERO) & (nuoviGiocatori = TRE)) | ((((var_$pistaLibera_0 = PRIMA) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (statoPista_PRIMA = ZERO) & (nuoviGiocatori = TRE)) | ((statoPista_QUARTA = ZERO) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (nuoviGiocatori = TRE) & (var_$pistaLibera_0 = QUARTA))) | ((var_$pistaLibera_0 = SECONDA) & (statoPista_SECONDA = ZERO) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (nuoviGiocatori = TRE)))) & (guadagnoGiornaliero + 45) in {-2147483647, 0, 1, 10, 100, 11, 12, 13, 14, 15, 16, 17, 18, 19, 2, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 3, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 4, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 5, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 6, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 7, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 8, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 9, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99}: (guadagnoGiornaliero + 45);
+				TRUE: guadagnoGiornaliero;
+			esac;
+		next(statoClub) :=
+			case
+				(((apriClub & !(chiudiClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO)): APERTO;
+				(((chiudiClub & !(apriClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO)): CHIUSO;
+				TRUE: statoClub;
+			esac;
+		next(statoPista_NESSUNA) := statoPista_NESSUNA;
+		next(statoPista_PRIMA) :=
+			case
+				((var_$pistaLibera_0 = PRIMA) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (statoPista_PRIMA = ZERO)): nuoviGiocatori;
+				((((chiudiClub & !(apriClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO)) | (((!(chiudiClub) & (!(apriClub) & ((liberaPista != NESSUNA) & (nuoviGiocatori = ZERO)))) & (liberaPista = PRIMA) & (statoClub = APERTO)) | (((apriClub & !(chiudiClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO)))): ZERO;
+				TRUE: statoPista_PRIMA;
+			esac;
+		next(statoPista_QUARTA) :=
+			case
+				((((chiudiClub & !(apriClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO)) | ((((apriClub & !(chiudiClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO)) | ((!(chiudiClub) & (!(apriClub) & ((liberaPista != NESSUNA) & (nuoviGiocatori = ZERO)))) & (liberaPista = QUARTA) & (statoClub = APERTO)))): ZERO;
+				((statoPista_QUARTA = ZERO) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (var_$pistaLibera_0 = QUARTA)): nuoviGiocatori;
+				TRUE: statoPista_QUARTA;
+			esac;
+		next(statoPista_SECONDA) :=
+			case
+				((((!(chiudiClub) & (!(apriClub) & ((liberaPista != NESSUNA) & (nuoviGiocatori = ZERO)))) & (statoClub = APERTO) & (liberaPista = SECONDA)) | (((apriClub & !(chiudiClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO))) | (((chiudiClub & !(apriClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO))): ZERO;
+				((var_$pistaLibera_0 = SECONDA) & (statoPista_SECONDA = ZERO) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO)): nuoviGiocatori;
+				TRUE: statoPista_SECONDA;
+			esac;
+		next(statoPista_TERZA) :=
+			case
+				((var_$pistaLibera_0 = TERZA) & (!(chiudiClub) & (((nuoviGiocatori != ZERO) & (liberaPista = NESSUNA)) & !(apriClub))) & (statoClub = APERTO) & (statoPista_TERZA = ZERO)): nuoviGiocatori;
+				((((chiudiClub & !(apriClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO)) | ((((apriClub & !(chiudiClub)) & (liberaPista = NESSUNA)) & (nuoviGiocatori = ZERO)) | ((!(chiudiClub) & (!(apriClub) & ((liberaPista != NESSUNA) & (nuoviGiocatori = ZERO)))) & (statoClub = APERTO) & (liberaPista = TERZA)))): ZERO;
+				TRUE: statoPista_TERZA;
+			esac;
+	INVAR	(((statoPista_QUARTA = ZERO) & (var_$pistaLibera_0 = QUARTA)) | ((var_$pistaLibera_0 = PRIMA) & (statoPista_PRIMA = ZERO)) | (!(statoPista_PRIMA = ZERO) & !(statoPista_SECONDA = ZERO) & !(statoPista_QUARTA = ZERO) & !(statoPista_TERZA = ZERO)) | ((var_$pistaLibera_0 = TERZA) & (statoPista_TERZA = ZERO)) | ((var_$pistaLibera_0 = SECONDA) & (statoPista_SECONDA = ZERO)));
+--CTL properties
+CTLSPEC NAME ctl0 := AG(!(((((liberaPista != NESSUNA) & (nuoviGiocatori = ZERO)) & ! apriClub) & ! chiudiClub) & ((statoClub = APERTO) & (liberaPista = PRIMA))));

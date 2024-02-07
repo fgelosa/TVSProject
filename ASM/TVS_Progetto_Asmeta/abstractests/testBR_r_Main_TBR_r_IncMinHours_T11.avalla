@@ -1,0 +1,7267 @@
+scenario testBR_r_Main_TBR_r_IncMinHours_T11
+
+load ./..\AdvancedClock.asm
+
+//// test name test@BR_r_Main_TBR_r_IncMinHours_T11
+//// generated for (test goal): BR_r_Main_TBR_r_IncMinHours_T11: (seconds = 59) and (minutes = 59)
+check minutes = 0;
+check hours = 0;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 1;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 2;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 3;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 4;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 5;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 6;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 7;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 8;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 9;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 10;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 11;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 12;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 13;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 14;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 15;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 16;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 17;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 18;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 19;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 20;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 21;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 22;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 23;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 24;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 25;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 26;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 27;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 28;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 29;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 30;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 31;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 32;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 33;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 34;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 35;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 36;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 37;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 38;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 39;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 40;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 41;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 42;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 43;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 44;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 45;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 46;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 47;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 48;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 49;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 50;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 51;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 52;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 53;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 54;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 55;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 56;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 57;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 58;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step
+check minutes = 59;
+check seconds = 0;
+step
+check seconds = 1;
+step
+check seconds = 2;
+step
+check seconds = 3;
+step
+check seconds = 4;
+step
+check seconds = 5;
+step
+check seconds = 6;
+step
+check seconds = 7;
+step
+check seconds = 8;
+step
+check seconds = 9;
+step
+check seconds = 10;
+step
+check seconds = 11;
+step
+check seconds = 12;
+step
+check seconds = 13;
+step
+check seconds = 14;
+step
+check seconds = 15;
+step
+check seconds = 16;
+step
+check seconds = 17;
+step
+check seconds = 18;
+step
+check seconds = 19;
+step
+check seconds = 20;
+step
+check seconds = 21;
+step
+check seconds = 22;
+step
+check seconds = 23;
+step
+check seconds = 24;
+step
+check seconds = 25;
+step
+check seconds = 26;
+step
+check seconds = 27;
+step
+check seconds = 28;
+step
+check seconds = 29;
+step
+check seconds = 30;
+step
+check seconds = 31;
+step
+check seconds = 32;
+step
+check seconds = 33;
+step
+check seconds = 34;
+step
+check seconds = 35;
+step
+check seconds = 36;
+step
+check seconds = 37;
+step
+check seconds = 38;
+step
+check seconds = 39;
+step
+check seconds = 40;
+step
+check seconds = 41;
+step
+check seconds = 42;
+step
+check seconds = 43;
+step
+check seconds = 44;
+step
+check seconds = 45;
+step
+check seconds = 46;
+step
+check seconds = 47;
+step
+check seconds = 48;
+step
+check seconds = 49;
+step
+check seconds = 50;
+step
+check seconds = 51;
+step
+check seconds = 52;
+step
+check seconds = 53;
+step
+check seconds = 54;
+step
+check seconds = 55;
+step
+check seconds = 56;
+step
+check seconds = 57;
+step
+check seconds = 58;
+step
+check seconds = 59;
+step

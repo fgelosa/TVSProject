@@ -1,0 +1,10 @@
+Model Project
+ Parameters:
+   aperto : Boolean
+   giocatori:  [ 0 .. 4 ]
+   pista: [0 .. 4]
+   guadagno: [ 0 .. 1000]
+   giorno : {lun,mar,mer,gio,ven,sab,dom}
+
+ Constraints:
+   # giocatori > 0 => pista > 0 #
