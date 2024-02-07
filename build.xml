@@ -22,4 +22,15 @@
         <java jar="build/jar/BowlingClub.jar" fork="true"/>
     </target>
 
+	<target name="test" depends="compile">
+ 	   <junit printsummary="on" fork="true" haltonfailure="yes">
+  	      <classpath refid="junit.class.path" />
+  	      <formatter type="xml" />
+  	      <batchtest todir="${test.report.dir}">
+  	          <fileset dir="${test.dir}">
+   	             <include name="**/*Test*.java" />
+   	         </fileset>
+  	      </batchtest>
+  	  </junit>
+  	</target>
 </project>
